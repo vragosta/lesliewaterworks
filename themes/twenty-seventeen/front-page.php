@@ -9,6 +9,8 @@
 
 <?php get_header(); ?>
 
+<?php get_template_part( 'partials/content', 'slider' ); ?>
+
 <div style="display: flex; align-items: center; justify-content: center; height: 1000px;">
 	Placeholder
 </div>
