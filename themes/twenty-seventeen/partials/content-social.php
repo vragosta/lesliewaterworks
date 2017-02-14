@@ -14,23 +14,17 @@ $twitter   = get_user_meta( LESLIEWATERWORKS_SITE_ADMIN, 'twitter', true );
 $instagram = get_user_meta( LESLIEWATERWORKS_SITE_ADMIN, 'instagram', true ); ?>
 
 <div class="social">
-	<?php if ( $facebook ) : ?>
-		<a href="<?php echo esc_url( $facebook ); ?>" class="facebook">
-			<i class="fa fa-facebook" aria-hidden="true"></i>
-		</a>
-	<?php endif; ?>
+	<a href="<?php echo esc_url( $facebook ); ?>" class="facebook">
+		<i class="fa fa-facebook" aria-hidden="true"></i>
+	</a>
 
-	<?php if ( $twitter ) : ?>
-		<a href="<?php echo esc_url( $twitter ); ?>" class="twitter">
-			<i class="fa fa-twitter" aria-hidden="true"></i>
-		</a>
-	<?php endif; ?>
+	<a href="<?php echo esc_url( $twitter ); ?>" class="twitter">
+		<i class="fa fa-twitter" aria-hidden="true"></i>
+	</a>
 
-	<?php if ( $instagram ) : ?>
-		<a href="<?php echo esc_url( $instagram ); ?>" class="instagram">
-			<i class="fa fa-instagram" aria-hidden="true"></i>
-		</a>
-	<?php endif; ?>
+	<a href="<?php echo esc_url( $instagram ); ?>" class="instagram">
+		<i class="fa fa-instagram" aria-hidden="true"></i>
+	</a>
 
 	<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="contact">
 		<i class="fa fa-envelope-o" aria-hidden="true"></i>
