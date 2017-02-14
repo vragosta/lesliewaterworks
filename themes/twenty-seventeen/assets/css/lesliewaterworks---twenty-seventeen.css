@@ -224,11 +224,10 @@ p {
 	color: #4099ff;
 }
 
-
 #footer .social a.instagram:hover i {
 	color: #cd486b;
 }
 
-#contact .social a.contact:hover i {
-	color: #007236;
+#footer .social a.linkedin:hover i {
+	color: #0077b5;
 }
