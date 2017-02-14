@@ -2,7 +2,7 @@
 /**
  * Main header navigation for both desktop and mobile designs.
  *
- * @package Leslie Waterworks - Twenty Seventeen
+ * @package Leslie WaterWorks - Twenty Seventeen
  * @since   0.1.0
  * @uses    get_template_part()
  */

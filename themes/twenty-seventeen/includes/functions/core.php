@@ -2,7 +2,7 @@
 /**
  * This file contains the necessary theme configuration functions.
  *
- * @package Leslie Waterworks - Twenty Seventeen
+ * @package Leslie WaterWorks - Twenty Seventeen
  * @since   0.1.0
  */
 
@@ -37,6 +37,7 @@ function setup() {
  * @return void
  */
 function lesliewaterworks_setup() {
+
 	// Add RSS feed links to <head> for posts and comments.
 	add_theme_support( 'automatic-feed-links' );
 
@@ -89,10 +90,18 @@ function scripts() {
 		true
 	);
 
+	wp_register_script(
+		'slick',
+		'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js',
+		array( 'jquery' ),
+		STORYCORPS_ORG_VERSION,
+		true
+	);
+
 	wp_enqueue_script(
 		'lesliewaterworks_com',
 		LESLIEWATERWORKS_COM_TEMPLATE_URL . "/assets/js/lesliewaterworks---twenty-seventeen.js",
-		array( 'jquery', 'bootstrap' ),
+		array( 'jquery', 'bootstrap', 'slick' ),
 		LESLIEWATERWORKS_COM_VERSION,
 		true
 	);
@@ -136,10 +145,24 @@ function styles() {
 		LESLIEWATERWORKS_COM_VERSION
 	);
 
+	wp_register_style(
+		'slick',
+		'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css',
+		array(),
+		STORYCORPS_ORG_VERSION
+	);
+
+	wp_register_style(
+		'slick-theme',
+		'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css',
+		array( 'slick' ),
+		STORYCORPS_ORG_VERSION
+	);
+
 	wp_enqueue_style(
 		'lesliewaterworks_com',
 		LESLIEWATERWORKS_COM_TEMPLATE_URL . "/assets/css/lesliewaterworks---twenty-seventeen.css",
-		array( 'bootstrap', 'fontawesome', 'ionicons', 'sanitize' ),
+		array( 'bootstrap', 'fontawesome', 'ionicons', 'sanitize', 'slick-theme' ),
 		LESLIEWATERWORKS_COM_VERSION
 	);
 }

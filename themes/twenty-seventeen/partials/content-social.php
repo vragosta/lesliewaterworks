@@ -1,9 +1,9 @@
 <?php
 /**
  * Template part social icons.
- * These icon links lead to VincentRagosta social media pages.
+ * These icon links lead to Leslie WaterWorks social media pages.
  *
- * @package Vincent Ragosta - Twenty Sixteen
+ * @package Leslie WaterWorks - Twenty Seventeen
  * @since   0.1.0
  * @uses    esc_url(), site_url()
  */

@@ -2,7 +2,7 @@
 /**
  * Template for displaying the contact information in the footer.
  *
- * @package Vincent Ragosta - Twenty Sixteen
+ * @package Leslie WaterWorks - Twenty Seventeen
  * @since   0.1.0
  * @uses    esc_attr(), esc_html()
  */
