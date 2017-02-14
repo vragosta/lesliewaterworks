@@ -24,16 +24,11 @@
       </div>
 
       <!-- Menu -->
-      <div id="menu">
-        <a>Home</a>
-        <a>Water Coolers <i class="fa fa-chevron-down"></i></a>
-        <a>Ice Machines <i class="fa fa-chevron-down"></i></a>
-        <a>About Us</a>
-        <a>Contact Us</a>
-      </div>
+      <?php get_template_part( 'partials/content', 'menu' ); ?>
 
     </section>
 
+    <!-- Dropdown Button -->
     <i class="ion ion-navicon dropdown"></i>
 
   </nav>

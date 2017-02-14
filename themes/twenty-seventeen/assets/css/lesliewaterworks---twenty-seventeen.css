@@ -4,13 +4,29 @@
 
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700');
 
+/*=======================
+  === Core Components ===
+  =======================*/
 body {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
-}
-
-#header {
 	max-width: 120rem;
 	margin: 0 auto;
+}
+
+h3,
+h4 {
+	margin: 0;
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+/*=======================
+  ======== Header =======
+  =======================*/
+#header {
 	padding: 2rem;
 }
 
@@ -44,24 +60,33 @@ body {
 	}
 }
 
+/*=======================
+  ========= Menu ========
+  =======================*/
+#menu {
+	text-align: center;
+}
+
 #menu a {
 	display: inline-flex;
 	align-items: center;
-	padding: 0 1rem;
+	margin: 0 1rem;
 	font-size: 2rem;
 	color: #333;
-	text-decoration: none;
 	cursor: pointer;
+	text-decoration: none;
 	transition: color 0.5s ease-in-out;
 }
 
-#menu a i {
-	font-size: 1rem;
-	margin-left: 0.5rem;
+@media only screen and ( max-width: 500px ) {
+	#footer #menu a {
+		font-size: 1.8rem;
+		margin: 0 0.5rem;
+	}
 }
 
-#menu a:last-child {
-	padding-right: 0;
+#header #menu a:last-child {
+	margin-right: 0;
 }
 
 #menu a:hover {
@@ -133,4 +158,77 @@ body {
 		font-size: 2.5rem;
 		padding: 0 0.5rem;
 	}
+}
+
+/*=======================
+  ======== Footer =======
+  =======================*/
+#footer {
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+@media only screen and ( max-width: 500px ) {
+	#footer {
+		padding: 1rem;
+	}
+}
+
+#footer .info-panel div {
+	margin: 1rem 0;
+}
+
+#footer .contact-info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#footer .contact-info a {
+	text-decoration: none;
+	color: #007236;
+}
+
+#footer .copyright {
+	max-width: 700px;
+}
+
+#footer .copyright p span {
+	font-size: 2rem;
+}
+
+#footer .social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#footer .social a {
+	margin: 0 1rem;
+	font-size: 2rem;
+	color: #333;
+}
+
+#footer .social a i {
+	transition: color 0.5s ease-in-out;
+}
+
+#footer .social a.facebook:hover i {
+	color: #3b5998;
+}
+
+#footer .social a.twitter:hover i {
+	color: #4099ff;
+}
+
+
+#footer .social a.instagram:hover i {
+	color: #cd486b;
+}
+
+#contact .social a.contact:hover i {
+	color: #007236;
 }
