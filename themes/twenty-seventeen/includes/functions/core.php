@@ -37,6 +37,7 @@ function setup() {
  * @return void
  */
 function lesliewaterworks_setup() {
+
 	// Add RSS feed links to <head> for posts and comments.
 	add_theme_support( 'automatic-feed-links' );
 
