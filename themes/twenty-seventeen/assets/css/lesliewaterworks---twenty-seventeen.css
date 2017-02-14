@@ -1,10 +1,39 @@
 /**
  * Leslie WaterWorks - Twenty Seventeen
  */
-#header {
+
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700');
+
+/*=======================
+  === Core Components ===
+  =======================*/
+body {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	max-width: 120rem;
 	margin: 0 auto;
-	padding-top: 4rem;
+}
+
+h3,
+h4 {
+	margin: 0;
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+/*=======================
+  ======== Header =======
+  =======================*/
+#header {
+	padding: 2rem;
+}
+
+@media only screen and ( max-width: 500px ) {
+	#header {
+		padding: 1rem;
+	}
 }
 
 #header .nav-container {
@@ -14,12 +43,192 @@
 }
 
 #header .logo-container {
-	width: 25%;
 	display: flex;
 	align-items: center;
 }
 
 #header .logo-container img {
-	width: 100%;
-	height: 100%;
+	width: 300px;
+	height: 81px;
+	transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+@media only screen and ( max-width: 500px ) {
+	#header .logo-container img {
+		width: 200px;
+		height: 54px;
+	}
+}
+
+/*=======================
+  ========= Menu ========
+  =======================*/
+#menu {
+	text-align: center;
+}
+
+#menu a {
+	display: inline-flex;
+	align-items: center;
+	margin: 0 1rem;
+	font-size: 2rem;
+	color: #333;
+	cursor: pointer;
+	text-decoration: none;
+	transition: color 0.5s ease-in-out;
+}
+
+@media only screen and ( max-width: 500px ) {
+	#footer #menu a {
+		font-size: 1.8rem;
+		margin: 0 0.5rem;
+	}
+}
+
+#header #menu a:last-child {
+	margin-right: 0;
+}
+
+#menu a:hover {
+	color: #007236;
+}
+
+#header .info-panel-container {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+@media only screen and ( max-width: 991px ) {
+	#header .info-panel-container {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+/*--- TODO Consider Revising ---*/
+@media only screen and ( max-width: 768px ) {
+	#header .info-panel-container {
+		display: none;
+	}
+}
+
+#header .info-panel {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	font-size: 2rem;
+}
+
+#header .info-panel span:first-child {
+	color: #007236;
+}
+
+#header .info-panel span:nth-child(2) {
+	font-weight: 300;
+}
+
+#header .dropdown {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	right: 2rem;
+	color: #007236;
+	border-radius: 4px;
+	padding: 0 1rem;
+	font-size: 3.5rem;
+	cursor: pointer;
+	transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+#header .dropdown:hover {
+	background-color: #007236;
+	color: #fff;
+}
+
+@media only screen and ( max-width: 991px ) {
+	#header .dropdown {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@media only screen and ( max-width: 500px ) {
+	#header .dropdown {
+		font-size: 2.5rem;
+		padding: 0 0.5rem;
+	}
+}
+
+/*=======================
+  ======== Footer =======
+  =======================*/
+#footer {
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+@media only screen and ( max-width: 500px ) {
+	#footer {
+		padding: 1rem;
+	}
+}
+
+#footer .info-panel div {
+	margin: 1rem 0;
+}
+
+#footer .contact-info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#footer .contact-info a {
+	text-decoration: none;
+	color: #007236;
+}
+
+#footer .copyright {
+	max-width: 700px;
+}
+
+#footer .copyright p span {
+	font-size: 2rem;
+}
+
+#footer .social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#footer .social a {
+	margin: 0 1rem;
+	font-size: 2rem;
+	color: #333;
+}
+
+#footer .social a i {
+	transition: color 0.5s ease-in-out;
+}
+
+#footer .social a.facebook:hover i {
+	color: #3b5998;
+}
+
+#footer .social a.twitter:hover i {
+	color: #4099ff;
+}
+
+
+#footer .social a.instagram:hover i {
+	color: #cd486b;
+}
+
+#contact .social a.contact:hover i {
+	color: #007236;
 }

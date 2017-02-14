@@ -15,14 +15,21 @@
     <section class="logo-container">
       <img src="<?php echo LESLIEWATERWORKS_COM_TEMPLATE_URL . '/assets/images/main-logo.jpg'; ?>" />
     </section>
-    <!-- <figure class="logo-container" style="padding-bottom: 56.25%; position: relative;">
-      <a class="logo" style="background-image: url( <?php echo LESLIEWATERWORKS_COM_TEMPLATE_URL . '/assets/images/main-logo.jpg'; ?> ); background-size: contain; background-position: center; position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></a>
-    </figure> -->
 
-    <!-- <section class="info-panel">
-      <p>A Family Owned and Operated Company</p>
-      <p>Call Us Toll Free: 1-866-426-4100</p>
-    </section> -->
+    <section class="info-panel-container">
+
+      <div class="info-panel">
+        <span>A Family Owned and Operated Company</span>
+        <span>Call Us Toll Free: 1-866-426-4100</span>
+      </div>
+
+      <!-- Menu -->
+      <?php get_template_part( 'partials/content', 'menu' ); ?>
+
+    </section>
+
+    <!-- Dropdown Button -->
+    <i class="ion ion-navicon dropdown"></i>
 
   </nav>
 </header>

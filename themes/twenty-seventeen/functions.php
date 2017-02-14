@@ -18,10 +18,12 @@ define( 'LESLIEWATERWORKS_COM_TEMPLATE_URL', get_template_directory_uri() );
 define( 'LESLIEWATERWORKS_COM_PATH', get_template_directory() . '/' );
 define( 'LESLIEWATERWORKS_COM_INC', LESLIEWATERWORKS_COM_PATH . 'includes/' );
 define( 'LESLIEWATERWORKS_SITE_ADMIN', 1 );
-define( 'LESLIEWATERWORKS_COM_IMAGE_SIZE', 'full' );
 
 // Include compartmentalized functions.
 require_once LESLIEWATERWORKS_COM_INC . 'functions/core.php';
+
+// Include metaboxes.
+require_once LESLIEWATERWORKS_COM_INC . 'metaboxes/metabox-user.php';
 
 // Include essential functions.
 // require_once LESLIEWATERWORKS_COM_INC . 'functions/essentials.php';
