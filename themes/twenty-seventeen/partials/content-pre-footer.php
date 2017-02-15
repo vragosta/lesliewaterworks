@@ -8,7 +8,7 @@
  */
 ?>
 
-<footer id="pre-footer">
+<section id="pre-footer">
 	<h4>Leslie WaterWorks Product Certifications and Associations:</h4>
 
 	<div class="sponsors">
@@ -20,7 +20,7 @@
 	</div>
 
 	<div class="authorized-resellers">
-		<a href="http://www.barrysmycarpets.com/" target="_blank" data-event="Sponsors" data-label="Footer - BMC_logo"><img src="<?php echo esc_url( LESLIEWATERWORKS_COM_TEMPLATE_URL ); ?>/assets/images/img-sponsor-7L.png" id="logo7" alt="" height="100px;"></a>
-		<a href="http://theofficefurniturestore.com/" target="_blank" data-event="Sponsors" data-label="Footer - TOFS_logo"><img src="<?php echo esc_url( LESLIEWATERWORKS_COM_TEMPLATE_URL ); ?>/assets/images/img-sponsor-8L.png" id="logo8" alt="" height="100px;"></a>
+		<a href="http://www.barrysmycarpets.com/" target="_blank" data-event="Sponsors" data-label="Footer - BMC_logo"><img src="<?php echo esc_url( LESLIEWATERWORKS_COM_TEMPLATE_URL ); ?>/assets/images/img-sponsor-7L.png" id="logo7" alt="" ></a>
+		<a href="http://theofficefurniturestore.com/" target="_blank" data-event="Sponsors" data-label="Footer - TOFS_logo"><img src="<?php echo esc_url( LESLIEWATERWORKS_COM_TEMPLATE_URL ); ?>/assets/images/img-sponsor-8L.png" id="logo8" alt="" ></a>
 	</div>
-</footer>
+</section>
