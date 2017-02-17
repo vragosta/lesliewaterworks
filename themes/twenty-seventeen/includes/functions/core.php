@@ -9,6 +9,11 @@
 namespace lesliewaterworks_com\Twenty_Seventeen\Core;
 
 /**
+ * Allows use of multiple post thumbnails plugin in this file
+ */
+use \MultiPostThumbnails;
+
+/**
  * Set up theme defaults and register supported WordPress features.
  *
  * @since  0.1.0
@@ -72,6 +77,25 @@ function lesliewaterworks_setup() {
 
 	// If set to 'false', the admin bar will not display on front end.
 	show_admin_bar( false );
+
+	/**
+	 * Generate new image meta boxes.
+	 * Add 'slider-image' to watercooler and ice machine custom post types.
+	 */
+	if ( class_exists( 'MultiPostThumbnails' ) ) {
+		new MultiPostThumbnails( array(
+			'label'     => __( 'Slider Image', 'lesliewaterworks' ),
+			'id'        => 'slider-image',
+			'post_type' => 'watercooler'
+		) );
+
+		new MultiPostThumbnails( array(
+			'label'     => __( 'Slider Image', 'lesliewaterworks' ),
+			'id'        => 'slider-image',
+			'post_type' => 'icemachine'
+		) );
+
+	}
 }
 
 /**
