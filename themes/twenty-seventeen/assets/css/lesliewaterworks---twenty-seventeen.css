@@ -169,6 +169,7 @@ p {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	border-top: 1px solid #ddd;
 }
 
 @media only screen and ( max-width: 500px ) {
@@ -228,6 +229,54 @@ p {
 	color: #cd486b;
 }
 
-#contact .social a.contact:hover i {
+#footer .social a.linkedin:hover i {
+	color: #0077b5;
+}
+
+#pre-footer {
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#pre-footer h4 {
 	color: #007236;
+	font-size: 2rem;
+	margin-bottom: 1.5rem;
+}
+
+#pre-footer .sponsors {
+	max-width: 800px;
+	margin-bottom: 1.5rem;
+}
+
+#pre-footer .sponsors a {
+	margin: 0 4rem;
+}
+
+#pre-footer .authorized-resellers img {
+	height: 7.5rem;
+}
+
+@media only screen and ( max-width: 768px ) {
+	#pre-footer .sponsors,
+	#pre-footer .authorized-resellers {
+		text-align: center;
+	}
+
+	#pre-footer .sponsors a {
+		margin: 0 2rem;
+	}
+
+	#pre-footer .authorized-resellers img {
+		height: 5.5rem;
+	}
+}
+
+@media only screen and ( max-width: 500px ) {
+	#pre-footer .sponsors a {
+		margin: 0 1rem;
+	}
 }

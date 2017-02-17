@@ -11,28 +11,23 @@
 // Get 'facebook', 'twitter', 'instagram' from the Site admin/owner.
 $facebook  = get_user_meta( LESLIEWATERWORKS_SITE_ADMIN, 'facebook', true );
 $twitter   = get_user_meta( LESLIEWATERWORKS_SITE_ADMIN, 'twitter', true );
-$instagram = get_user_meta( LESLIEWATERWORKS_SITE_ADMIN, 'instagram', true ); ?>
+$instagram = get_user_meta( LESLIEWATERWORKS_SITE_ADMIN, 'instagram', true );
+$linkedin  = get_user_meta( LESLIEWATERWORKS_SITE_ADMIN, 'linkedin', true );  ?>
 
 <div class="social">
-	<?php if ( $facebook ) : ?>
-		<a href="<?php echo esc_url( $facebook ); ?>" class="facebook">
-			<i class="fa fa-facebook" aria-hidden="true"></i>
-		</a>
-	<?php endif; ?>
+	<a href="<?php echo esc_url( $facebook ); ?>" class="facebook" target="_blank">
+		<i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+	</a>
 
-	<?php if ( $twitter ) : ?>
-		<a href="<?php echo esc_url( $twitter ); ?>" class="twitter">
-			<i class="fa fa-twitter" aria-hidden="true"></i>
-		</a>
-	<?php endif; ?>
+	<a href="<?php echo esc_url( $twitter ); ?>" class="twitter" target="_blank">
+		<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+	</a>
 
-	<?php if ( $instagram ) : ?>
-		<a href="<?php echo esc_url( $instagram ); ?>" class="instagram">
-			<i class="fa fa-instagram" aria-hidden="true"></i>
-		</a>
-	<?php endif; ?>
+	<a href="<?php echo esc_url( $instagram ); ?>" class="instagram" target="_blank">
+		<i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+	</a>
 
-	<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="contact">
-		<i class="fa fa-envelope-o" aria-hidden="true"></i>
+	<a href="<?php echo esc_url( $linkedin ); ?>" class="linkedin" target="_blank">
+		<i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
 	</a>
 </div>

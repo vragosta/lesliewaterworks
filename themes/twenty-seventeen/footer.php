@@ -8,6 +8,9 @@
  */
 	//get_template_part( 'partials/content', 'mobile-menu' ); ?>
 
+	<!-- Pre Footer -->
+	<?php get_template_part( 'partials/content', 'pre-footer' ); ?>
+
 	<footer id="footer" class="col-flex-center">
 
 		<!-- Menu -->
