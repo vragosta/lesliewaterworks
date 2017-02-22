@@ -11,6 +11,10 @@ body {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	max-width: 120rem;
 	margin: 0 auto;
+	background: #deefff; /* Old browsers */
+	background: -moz-linear-gradient(top, #deefff 0%, #98bede 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #deefff 0%,#98bede 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #deefff 0%,#98bede 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 h3,
@@ -278,5 +282,21 @@ p {
 @media only screen and ( max-width: 500px ) {
 	#pre-footer .sponsors a {
 		margin: 0 1rem;
+	}
+}
+
+.front-page h2 {
+	color: #007236;
+}
+
+.front-page aside p {
+	font-size: 2rem;
+	line-height: 3rem;
+	text-align: left;
+}
+
+@media only screen and ( max-width: 768px ) {
+	.front-page aside p {
+		line-height: normal;
 	}
 }
