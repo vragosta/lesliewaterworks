@@ -10,15 +10,21 @@
 <?php
 
 	$args = array(
-		'post_type' => array( 'watercooler' ),
+		'post_type' => array( 'watercooler', 'icemachine' ),
+		'posts_per_page' => -1, /*--- Ideally we dont want to do this, however since our content is very small this is okay for now. ---*/
 		'order'     => 'ASC'
 	);
 
-	$query = new WP_Query( $args );
+	$query = new WP_Query( $args ); ?>
 
-	while ( $query->have_posts() ) : $query->the_post();
-		// echo 'ID: ' . $post->ID;
-	endwhile;
-	wp_reset_postdata(); ?>
+	<section id="slick-slider">
+		<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+			<?php if ( class_exists( 'MultiPostThumbnails' ) && MultiPostThumbnails::has_post_thumbnail( $post->post_type, 'slider-image', $post->ID ) ) : ?>
+				<?php $image = MultiPostThumbnails::get_post_thumbnail_url( $post->post_type, 'slider-image', $post->ID, 'large' ); ?>
+				<?php // echo $image . '<br />'; ?>
+				<img src="<?php echo esc_attr( $image ); ?>" />
+			<?php endif; ?>
 
-	<section style="display: flex; justify-content: center; align-items: center; height: 400px; border: 1px solid #ddd; margin: 2rem;">Placeholder</section>
+		<?php endwhile; ?>
+		<?php wp_reset_postdata(); ?>
+	</section>
