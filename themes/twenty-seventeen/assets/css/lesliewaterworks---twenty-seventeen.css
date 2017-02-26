@@ -300,3 +300,7 @@ p {
 		line-height: normal;
 	}
 }
+
+/*.front-page section .new-watercoolers div:last-child {
+	float: right;
+}*/
