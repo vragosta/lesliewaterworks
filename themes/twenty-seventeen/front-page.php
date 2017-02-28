@@ -16,6 +16,8 @@ get_header(); ?>
 	<?php get_template_part( 'partials/aside', 'homepage-cta-B' ); ?>
 
 	<?php get_template_part( 'partials/content', 'section-A' ); ?>
+
+	<?php get_template_part( 'partials/content', 'section-B' ); ?>
 </main>
 
 <?php get_footer(); ?>

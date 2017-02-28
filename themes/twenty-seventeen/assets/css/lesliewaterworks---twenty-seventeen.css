@@ -11,10 +11,10 @@ body {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	max-width: 120rem;
 	margin: 0 auto;
-	background: #deefff; /* Old browsers */
-	background: -moz-linear-gradient(top, #deefff 0%, #98bede 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, #deefff 0%,#98bede 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, #deefff 0%,#98bede 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	/*background: #deefff;
+	background: -moz-linear-gradient(top, #deefff 0%, #98bede 100%);
+	background: -webkit-linear-gradient(top, #deefff 0%,#98bede 100%);
+	background: linear-gradient(to bottom, #deefff 0%,#98bede 100%); */
 }
 
 h3,
@@ -289,9 +289,10 @@ p {
 	color: #007236;
 }
 
-.front-page aside p {
-	font-size: 2rem;
-	line-height: 3rem;
+.front-page aside p,
+.front-page section p {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 1.6rem;
 	text-align: left;
 }
 
@@ -301,6 +302,22 @@ p {
 	}
 }
 
-/*.front-page section .new-watercoolers div:last-child {
-	float: right;
-}*/
+.front-page section p {
+	margin-bottom: 20px;
+}
+
+.front-page .btn {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	border-color: transparent;
+	background-color: #007236;
+  color: white;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+	transition: background-color .4s ease-in-out,border-color .4s ease-in-out,color .4s ease-in-out;
+	white-space: normal;
+	z-index: 1;
+}
+
+.front-page .btn:hover {
+	background-color: #3366CC;
+}
