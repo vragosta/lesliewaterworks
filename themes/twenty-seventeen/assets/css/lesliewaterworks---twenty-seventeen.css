@@ -321,3 +321,11 @@ p {
 .front-page .btn:hover {
 	background-color: #3366CC;
 }
+
+.front-page section .new-watercoolers {
+	padding: 1.5rem;
+}
+
+.front-page section .new-watercoolers h2 {
+	margin: 0 0 2rem 0; 
+}
