@@ -15,9 +15,9 @@ get_header(); ?>
 
 	<?php get_template_part( 'partials/aside', 'homepage-cta-B' ); ?>
 
-	<?php get_template_part( 'partials/content', 'section-A' ); ?>
+	<?php include( locate_template( 'partials/content-section-A.php' ) ); ?>
 
-	<?php get_template_part( 'partials/content', 'section-B' ); ?>
+	<?php include( locate_template( 'partials/content-section-B.php' ) ); ?>
 </main>
 
 <?php get_footer(); ?>

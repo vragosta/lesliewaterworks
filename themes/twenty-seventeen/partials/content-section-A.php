@@ -6,6 +6,9 @@
  * @since 0.1.0
  */
 
+// Initialize array to hold new watercooler IDs to be used in section B.
+$new_watercooler_ids = array();
+
 $args = array(
 	'post_type'      => array( 'watercooler' ),
 	'posts_per_page' => 2,
@@ -38,6 +41,9 @@ $new_watercoolers = new WP_Query( $args ); ?>
 						</div>
 					</div>
 				</div><?php
+
+				// Push the appropriate post IDs into array.
+				array_push( $new_watercooler_ids, $post->ID );
 
 			endwhile;
 			wp_reset_postdata();
