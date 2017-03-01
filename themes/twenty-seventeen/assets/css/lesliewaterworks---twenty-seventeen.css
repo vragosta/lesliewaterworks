@@ -11,6 +11,10 @@ body {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	max-width: 120rem;
 	margin: 0 auto;
+	/*background: #deefff;
+	background: -moz-linear-gradient(top, #deefff 0%, #98bede 100%);
+	background: -webkit-linear-gradient(top, #deefff 0%,#98bede 100%);
+	background: linear-gradient(to bottom, #deefff 0%,#98bede 100%); */
 }
 
 h3,
@@ -161,6 +165,57 @@ p {
 }
 
 /*=======================
+  ====== Pre-Footer =====
+  =======================*/
+#pre-footer {
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#pre-footer h4 {
+	color: #007236;
+	font-size: 2rem;
+	margin-bottom: 1.5rem;
+}
+
+#pre-footer .sponsors {
+	max-width: 800px;
+	margin-bottom: 1.5rem;
+}
+
+#pre-footer .sponsors a {
+	margin: 0 4rem;
+}
+
+#pre-footer .authorized-resellers img {
+	height: 7.5rem;
+}
+
+@media only screen and ( max-width: 768px ) {
+	#pre-footer .sponsors,
+	#pre-footer .authorized-resellers {
+		text-align: center;
+	}
+
+	#pre-footer .sponsors a {
+		margin: 0 2rem;
+	}
+
+	#pre-footer .authorized-resellers img {
+		height: 5.5rem;
+	}
+}
+
+@media only screen and ( max-width: 500px ) {
+	#pre-footer .sponsors a {
+		margin: 0 1rem;
+	}
+}
+
+/*=======================
   ======== Footer =======
   =======================*/
 #footer {
@@ -233,50 +288,74 @@ p {
 	color: #0077b5;
 }
 
-#pre-footer {
-	padding: 2rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
-
-#pre-footer h4 {
+/*=======================
+  ====== Front Page =====
+  =======================*/
+.front-page h2 {
 	color: #007236;
+}
+
+.front-page p {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 1.6rem;
+	text-align: left;
+}
+
+.front-page .promo-items {
+	margin-bottom: 2rem;
+	border-bottom: 3px solid #ddd;
+}
+
+.front-page .new-watercoolers {
+	padding: 1.5rem;
+	border-bottom: 3px solid #ddd;
+}
+
+.front-page .new-watercoolers h2 {
+	margin: 0 0 2rem 0;
+}
+
+.front-page section p {
+	margin-bottom: 20px;
+}
+
+.front-page .btn {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	border-color: transparent;
+	background-color: #007236;
+  color: white;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+	transition: background-color .4s ease-in-out,border-color .4s ease-in-out,color .4s ease-in-out;
+	white-space: normal;
+	z-index: 1;
+}
+
+.front-page .btn:hover {
+	background-color: #3366CC;
+}
+
+.front-page .misc-products {
+	padding: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+.front-page .misc-products h2 {
+	margin-top: 0;
+	margin-bottom: 2rem;
+}
+
+.front-page .archive-button-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 3.5rem;
+}
+
+.front-page .archive-button-container .btn {
+	background-color: #3366CC;
 	font-size: 2rem;
-	margin-bottom: 1.5rem;
 }
 
-#pre-footer .sponsors {
-	max-width: 800px;
-	margin-bottom: 1.5rem;
-}
-
-#pre-footer .sponsors a {
-	margin: 0 4rem;
-}
-
-#pre-footer .authorized-resellers img {
-	height: 7.5rem;
-}
-
-@media only screen and ( max-width: 768px ) {
-	#pre-footer .sponsors,
-	#pre-footer .authorized-resellers {
-		text-align: center;
-	}
-
-	#pre-footer .sponsors a {
-		margin: 0 2rem;
-	}
-
-	#pre-footer .authorized-resellers img {
-		height: 5.5rem;
-	}
-}
-
-@media only screen and ( max-width: 500px ) {
-	#pre-footer .sponsors a {
-		margin: 0 1rem;
-	}
+.front-page .archive-button-container .btn:hover {
+	background-color: #007236;
 }

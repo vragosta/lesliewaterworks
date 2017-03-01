@@ -190,3 +190,37 @@ function styles() {
 		LESLIEWATERWORKS_COM_VERSION
 	);
 }
+
+/**
+ * Create sidebars for back-end.
+ *
+ * @since  0.1.0
+ * @uses   register_sidebar()
+ * @return void
+ */
+function sidebars() {
+	$homepage_1 = array(
+		'name'          => __( 'Homepage 1', 'theme_text_domain' ),
+		'id'            => 'homepage-1',
+		'description'   => 'The first CTA sidebar on the homepage.',
+		'class'         => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	);
+
+	$homepage_2 = array(
+		'name'          => __( 'Homepage 2', 'theme_text_domain' ),
+		'id'            => 'homepage-2',
+		'description'   => 'The second CTA sidebar on the homepage.',
+		'class'         => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	);
+
+	register_sidebar( $homepage_1 );
+	register_sidebar( $homepage_2 );
+}

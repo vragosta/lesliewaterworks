@@ -5,14 +5,19 @@
  * @package Leslie WaterWorks - Twenty Seventeen
  * @since   0.1.0
  */
-?>
 
-<?php get_header(); ?>
+get_header(); ?>
 
-<?php get_template_part( 'partials/content', 'slider' ); ?>
+<main class="front-page">
+	<?php get_template_part( 'partials/content', 'slider' ); ?>
 
-<div style="display: flex; align-items: center; justify-content: center; height: 1000px;">
-	Placeholder
-</div>
+	<?php get_template_part( 'partials/aside', 'homepage-cta-A' ); ?>
+
+	<?php get_template_part( 'partials/aside', 'homepage-cta-B' ); ?>
+
+	<?php include( locate_template( 'partials/content-section-A.php' ) ); ?>
+
+	<?php include( locate_template( 'partials/content-section-B.php' ) ); ?>
+</main>
 
 <?php get_footer(); ?>
