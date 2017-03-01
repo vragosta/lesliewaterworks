@@ -14,15 +14,15 @@ $args = array(
 );
 
 // Arguments to obtain two most recent icecoolers.
-$args2 = array(
+$args1 = array(
 	'post_type'      => array( 'icemachine' ),
 	'posts_per_page' => 2,
 );
 
 $misc_watercoolers = new WP_Query( $args );
-$misc_icemachines  = new WP_Query( $args2 ); ?>
+$misc_icemachines  = new WP_Query( $args1 ); ?>
 
-<section class="container-fluid">
+<section class="section b container-fluid">
 		<!-- Section title -->
 	<h2>Our Other Products:</h2><?php
 

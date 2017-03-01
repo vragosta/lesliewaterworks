@@ -9,15 +9,19 @@
 get_header(); ?>
 
 <main class="front-page">
+
+	<!-- Slider -->
 	<?php get_template_part( 'partials/content', 'slider' ); ?>
 
-	<?php get_template_part( 'partials/aside', 'homepage-cta-A' ); ?>
+	<!-- Homepage CTAs -->
+	<?php get_template_part( 'partials/aside', 'homepage-cta' ); ?>
 
-	<?php get_template_part( 'partials/aside', 'homepage-cta-B' ); ?>
-
+	<!-- Section A -->
 	<?php include( locate_template( 'partials/content-section-A.php' ) ); ?>
 
+	<!-- Section B -->
 	<?php include( locate_template( 'partials/content-section-B.php' ) ); ?>
+
 </main>
 
 <?php get_footer(); ?>

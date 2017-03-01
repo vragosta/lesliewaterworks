@@ -291,28 +291,53 @@ p {
 /*=======================
   ====== Front Page =====
   =======================*/
+.front-page .cta.a,
+.front-page .cta + .cta,
+.front-page .cta + .section,
+.front-page .section + .section {
+	margin: 4rem 0 0 0;
+}
+
 .front-page h2 {
 	color: #007236;
+	margin: 0;
+}
+
+.front-page h2 + .textwidget p {
+	margin: 1rem 0 0 0;
 }
 
 .front-page p {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 1.6rem;
 	text-align: left;
-}
-
-.front-page .promo-items {
-	margin-bottom: 2rem;
-	border-bottom: 3px solid #ddd;
+	line-height: 1.7;
 }
 
 .front-page .new-watercoolers {
 	padding: 1.5rem;
-	border-bottom: 3px solid #ddd;
+}
+
+@media only screen and ( max-width: 768px ) {
+	.front-page .watercooler-item + .watercooler-item {
+		margin: 4rem 0 0 0;
+	}
+}
+
+.front-page .new-watercoolers .image-container {
+	display: flex;
+	justify-content: center;
+}
+
+.front-page .new-watercoolers .content-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 400px;
 }
 
 .front-page .new-watercoolers h2 {
-	margin: 0 0 2rem 0;
+	margin: 0 0 1rem 0;
 }
 
 .front-page section p {
