@@ -94,7 +94,7 @@ $misc_icemachines  = new WP_Query( $args1 ); ?>
 
 	<div class="archive-button-container">
 
-		<a href="#" class="btn btn-default btn-lg">See more products <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+		<a href="#" class="btn btn-default btn-md">See more products <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 	</div>
 
 </section>
