@@ -13,9 +13,11 @@ $args = array(
 	'post_type'      => array( 'watercooler' ),
 	'posts_per_page' => 2,
 );
+
 $new_watercoolers = new WP_Query( $args ); ?>
 
-<section class="container-fluid">
+<section class="section a container-fluid">
+
 	<!-- Section title -->
 	<h2>Brand New Products:</h2>
 
@@ -23,13 +25,17 @@ $new_watercoolers = new WP_Query( $args ); ?>
 		if ( $new_watercoolers->have_posts() ) :
 			while ( $new_watercoolers->have_posts() ) : $new_watercoolers->the_post(); ?>
 
-				<div class="col-md-12 col-lg-6">
+				<div class="watercooler-item col-xs-12 col-sm-6">
+
 					<div class="row">
-						<div class="col-md-4">
+
+						<div class="image-container col-xs-12 col-sm-12 col-md-4">
+
 							<!-- Post thumbnail with appropriate permalink -->
 							<a href="<?php echo get_the_permalink( $post->ID ); ?>"><?php the_post_thumbnail( array( 400, 400 ) ); ?></a>
 						</div>
-						<div class="col-md-8">
+
+						<div class="content-container col-xs-12 col-sm-12 col-md-8">
 							<!-- Post title -->
 							<h2><?php the_title(); ?></h2>
 
@@ -37,9 +43,13 @@ $new_watercoolers = new WP_Query( $args ); ?>
 							<?php the_content(); ?>
 
 							<!-- 'Learn more' button with appropriate permalink -->
-							<a href="<?php echo get_the_permalink( $post->ID ); ?>"><button class="btn btn-default btn-md">Learn more</button></a>
+							<div>
+								<a href="<?php echo get_the_permalink( $post->ID ); ?>" class="btn btn-default btn-md">Learn more</a>
+							</div>
 						</div>
+
 					</div>
+
 				</div><?php
 
 				// Push the appropriate post IDs into array.

@@ -291,28 +291,67 @@ p {
 /*=======================
   ====== Front Page =====
   =======================*/
+.front-page {
+	margin: 2rem 0;
+}
+
+.front-page .cta.a {
+	margin: 6rem 0 0 0;
+}
+
+.front-page .cta + .cta,
+.front-page .cta + .section,
+.front-page .section + .section {
+	margin: 4rem 0 0 0;
+}
+
 .front-page h2 {
 	color: #007236;
+	margin: 0;
+}
+
+.front-page h2 + .textwidget p {
+	margin: 1rem 0 0 0;
 }
 
 .front-page p {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 1.6rem;
 	text-align: left;
-}
-
-.front-page .promo-items {
-	margin-bottom: 2rem;
-	border-bottom: 3px solid #ddd;
+	line-height: 1.7;
 }
 
 .front-page .new-watercoolers {
 	padding: 1.5rem;
-	border-bottom: 3px solid #ddd;
+}
+
+@media only screen and ( max-width: 768px ) {
+	.front-page .watercooler-item + .watercooler-item {
+		margin: 4rem 0 0 0;
+	}
+}
+
+.front-page .image-container {
+	display: flex;
+	justify-content: center;
+}
+
+.front-page .content-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.front-page .new-watercoolers .content-container {
+	min-height: 400px;
+}
+
+.front-page .misc-products .content-container {
+	min-height: 315px;
 }
 
 .front-page .new-watercoolers h2 {
-	margin: 0 0 2rem 0;
+	margin: 0 0 1rem 0;
 }
 
 .front-page section p {
@@ -323,12 +362,10 @@ p {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	border-color: transparent;
 	background-color: #007236;
-  color: white;
-  font-size: 1.4rem;
-  text-transform: uppercase;
+	color: white;
+	font-size: 1.4rem;
+	text-transform: uppercase;
 	transition: background-color .4s ease-in-out,border-color .4s ease-in-out,color .4s ease-in-out;
-	white-space: normal;
-	z-index: 1;
 }
 
 .front-page .btn:hover {
@@ -337,7 +374,7 @@ p {
 
 .front-page .misc-products {
 	padding: 1.5rem;
-	margin-bottom: 2rem;
+	margin: 0 0 2rem;
 }
 
 .front-page .misc-products h2 {
@@ -348,7 +385,6 @@ p {
 .front-page .archive-button-container {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 3.5rem;
 }
 
 .front-page .archive-button-container .btn {

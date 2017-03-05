@@ -221,6 +221,30 @@ function sidebars() {
 		'after_title'   => '</h2>',
 	);
 
+	$homepage_3 = array(
+		'name'          => __( 'Homepage 3', 'theme_text_domain' ),
+		'id'            => 'homepage-3',
+		'description'   => 'The third CTA sidebar on the homepage.',
+		'class'         => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	);
+
+	$homepage_4 = array(
+		'name'          => __( 'Homepage 4', 'theme_text_domain' ),
+		'id'            => 'homepage-4',
+		'description'   => 'The fourth CTA sidebar on the homepage.',
+		'class'         => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	);
+
 	register_sidebar( $homepage_1 );
 	register_sidebar( $homepage_2 );
+	register_sidebar( $homepage_3 );
+	register_sidebar( $homepage_4 );
 }
