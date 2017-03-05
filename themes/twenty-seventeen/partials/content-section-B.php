@@ -6,11 +6,11 @@
  * @since 0.1.0
  */
 
-// Arguments to obtain two most recent watercoolers excluding the new ones.
+// Arguments to obtain two most recent watercoolers excluding the two newest from the query in section A.
 $args = array(
 	'post_type'      => array( 'watercooler' ),
 	'posts_per_page' => 2,
-	'post__not_in' => $new_watercooler_ids,
+	'post__not_in'   => $new_watercooler_ids,
 );
 
 // Arguments to obtain two most recent icecoolers.
@@ -29,12 +29,18 @@ $misc_icemachines  = new WP_Query( $args1 ); ?>
 	// Display two most recent watercoolers.
 	if ( $misc_watercoolers->have_posts() ) :
 		while ( $misc_watercoolers->have_posts() ) : $misc_watercoolers->the_post(); ?>
+
 			<div class="row misc-products">
-				<div class="col-md-3">
+
+				<div class="image-container col-xs-12 col-sm-4 col-md-3">
+
 					<!-- Post thumbnail with appropriate permalink -->
 					<a href="<?php echo get_the_permalink( $post->ID ); ?>"><?php the_post_thumbnail( array( 400, 400 ) ); ?></a>
+
 				</div>
-				<div class="col-md-9">
+
+				<div class="content-container col-xs-12 col-sm-8 col-md-9">
+
 					<!-- Post title -->
 					<h2><?php the_title(); ?></h2>
 
@@ -42,7 +48,10 @@ $misc_icemachines  = new WP_Query( $args1 ); ?>
 					<?php the_content(); ?>
 
 					<!-- 'Learn more' button with appropriate permalink -->
-					<a href="<?php echo get_the_permalink( $post->ID ); ?>"><button class="btn btn-default btn-md">Learn more</button></a>
+					<div>
+						<a href="<?php echo get_the_permalink( $post->ID ); ?>" class="btn btn-default btn-md">Learn more</a>
+					</div>
+
 				</div>
 			</div><?php
 
@@ -53,12 +62,18 @@ $misc_icemachines  = new WP_Query( $args1 ); ?>
 	// Display two most recent icemachines.
 	if ( $misc_icemachines->have_posts() ) :
 		while ( $misc_icemachines->have_posts() ) : $misc_icemachines->the_post(); ?>
+
 			<div class="row misc-products">
-				<div class="col-md-3">
+
+				<div class="image-container col-xs-12 col-sm-4 col-md-3">
+
 					<!-- Post thumbnail with appropriate permalink -->
 					<a href="<?php echo get_the_permalink( $post->ID ); ?>"><?php the_post_thumbnail( array( 400, 400 ) ); ?></a>
+
 				</div>
-				<div class="col-md-9">
+
+				<div class="content-container col-xs-12 col-sm-8 col-md-9">
+
 					<!-- Post title -->
 					<h2><?php the_title(); ?></h2>
 
@@ -66,7 +81,10 @@ $misc_icemachines  = new WP_Query( $args1 ); ?>
 					<?php the_content(); ?>
 
 					<!-- 'Learn more' button with appropriate permalink -->
-					<a href="<?php echo get_the_permalink( $post->ID ); ?>"><button class="btn btn-default btn-md">Learn more</button></a>
+					<div>
+						<a href="<?php echo get_the_permalink( $post->ID ); ?>" class="btn btn-default btn-md">Learn more</a>
+					</div>
+
 				</div>
 			</div><?php
 
@@ -75,8 +93,8 @@ $misc_icemachines  = new WP_Query( $args1 ); ?>
 	endif; ?>
 
 	<div class="archive-button-container">
-		<!-- TODO: figure out wtf the archive page link is -->
-		<a href="#"><button class="btn btn-default btn-lg">See more products <i class="fa fa-arrow-right" aria-hidden="true"></i></button></a>
+
+		<a href="#" class="btn btn-default btn-lg">See more products <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 	</div>
 
 </section>

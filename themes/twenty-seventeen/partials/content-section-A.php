@@ -43,7 +43,9 @@ $new_watercoolers = new WP_Query( $args ); ?>
 							<?php the_content(); ?>
 
 							<!-- 'Learn more' button with appropriate permalink -->
-							<a href="<?php echo get_the_permalink( $post->ID ); ?>"><button class="btn btn-default btn-md">Learn more</button></a>
+							<div>
+								<a href="<?php echo get_the_permalink( $post->ID ); ?>" class="btn btn-default btn-md">Learn more</a>
+							</div>
 						</div>
 
 					</div>
