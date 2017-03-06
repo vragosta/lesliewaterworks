@@ -26,6 +26,20 @@ get_header(); ?>
 		<a href="#" class="btn btn-default btn-lg">See more products <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 	</div>
 
+	<section id="mobile-menu">
+		<div class="close-container">
+			<button type="button" class="close-menu">
+				<i class="fa fa-times fa-2x"></i>
+			</button>
+		</div>
+		<div>
+
+			<!-- Menu -->
+			<?php get_template_part( 'partials/content', 'menu' ); ?>
+
+		</div>
+	</section>
+
 </main>
 
 <?php get_footer(); ?>

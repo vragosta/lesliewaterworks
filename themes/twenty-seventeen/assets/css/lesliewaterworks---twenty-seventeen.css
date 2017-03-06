@@ -504,7 +504,6 @@ p {
 @media only screen and ( max-width: 768px ) {
 	.front-page .misc-products + .misc-products {
 		margin: 4rem -1.5rem 0;
-		/*padding: 0;*/
 	}
 }
 
@@ -550,4 +549,59 @@ p {
 
 .front-page .archive-button-container .btn:hover {
 	background-color: #007236;
+}
+
+/*--- Mobile Menu ---*/
+#mobile-menu {
+
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	padding: 0;
+	margin: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba( 0, 0, 0, .85 );
+	z-index: 10;
+	transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+#mobile-menu.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+#mobile-menu .close-container {
+	display: flex;
+	justify-content: flex-end;
+	padding: 4.5rem 2.4rem 1.5rem 2rem;
+}
+
+#mobile-menu .close-container button:focus,
+#mobile-menu .close-container button:active,
+#mobile-menu .close-container button:active:focus {
+	outline: none;
+}
+
+#mobile-menu .close-container i {
+	color: #fff;
+}
+
+#mobile-menu #menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#mobile-menu #menu a {
+	font-size: 4rem;
+	margin: 2rem 0;
+	color: #a2a4a7;
+	transition: color 0.3s ease-in-out;
+}
+
+#mobile-menu #menu a:hover {
+	color: #007236;
 }
