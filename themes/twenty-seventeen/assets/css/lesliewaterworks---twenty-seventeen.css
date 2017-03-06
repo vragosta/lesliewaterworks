@@ -305,13 +305,56 @@ p {
 	margin: 4rem 0 0 0;
 }
 
+.front-page .slick-track img:focus {
+	outline: none;
+}
+
+.front-page h1 {
+	color: #007236;
+	font-size: 4.5rem;
+	margin: 0;
+	text-decoration: underline;
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page h1 {
+		font-size: 3.5rem;
+	}
+}
+
 .front-page h2 {
 	color: #007236;
 	margin: 0;
 }
 
+@media only screen and ( max-width: 500px ) {
+	.front-page h2 {
+		font-size: 2.5rem;
+	}
+}
+
+.front-page h2 a {
+	color: inherit;
+	opacity: 1;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.front-page h2 a:hover {
+	text-decoration: none;
+	opacity: 0.9;
+}
+
 .front-page h2 + .textwidget p {
 	margin: 1rem 0 0 0;
+}
+
+.front-page section img {
+	opacity: 1;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.front-page section img:hover {
+	opacity: 0.9;
 }
 
 .front-page p {
@@ -319,6 +362,12 @@ p {
 	font-size: 1.6rem;
 	text-align: left;
 	line-height: 1.7;
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page p {
+		font-size: 1.2rem;
+	}
 }
 
 .front-page .new-watercoolers {
@@ -346,8 +395,20 @@ p {
 	min-height: 400px;
 }
 
+@media only screen and ( max-width: 500px ) {
+	.front-page .new-watercoolers .content-container {
+		min-height: 200px;
+	}
+}
+
 .front-page .misc-products .content-container {
 	min-height: 315px;
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page .misc-products .content-container {
+		min-height: 200px;
+	}
 }
 
 .front-page .new-watercoolers h2 {
@@ -356,6 +417,20 @@ p {
 
 .front-page section p {
 	margin-bottom: 20px;
+}
+
+.front-page .mobile-content {
+	display: none;
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page .content {
+		display: none;
+	}
+
+	.front-page .mobile-content {
+		display: block;
+	}
 }
 
 .front-page .btn {
@@ -385,11 +460,12 @@ p {
 .front-page .archive-button-container {
 	display: flex;
 	justify-content: center;
+	margin: 4rem 0;
 }
 
 .front-page .archive-button-container .btn {
 	background-color: #3366CC;
-	font-size: 2rem;
+	font-size: 1.6rem;
 }
 
 .front-page .archive-button-container .btn:hover {

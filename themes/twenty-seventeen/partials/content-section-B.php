@@ -24,7 +24,7 @@ $misc_icemachines  = new WP_Query( $args1 ); ?>
 
 <section class="section b container-fluid">
 		<!-- Section title -->
-	<h2>Our Other Products:</h2><?php
+	<h1>Our Other Products:</h1><?php
 
 	// Display two most recent watercoolers.
 	if ( $misc_watercoolers->have_posts() ) :
@@ -42,10 +42,15 @@ $misc_icemachines  = new WP_Query( $args1 ); ?>
 				<div class="content-container col-xs-12 col-sm-8 col-md-9">
 
 					<!-- Post title -->
-					<h2><?php the_title(); ?></h2>
+					<h2>
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+					</h2>
 
 					<!-- Post content -->
-					<?php the_content(); ?>
+					<?php $content = wp_trim_words( get_the_content(), 80, '...<a href="#">Read More</a>' ); ?>
+					<?php $mobile_content = wp_trim_words( get_the_content(), 40, '...<a href="#">Read More</a>' ); ?>
+					<p class="content"><?php echo $content; ?></p>
+					<p class="mobile-content"><?php echo $mobile_content; ?></p>
 
 					<!-- 'Learn more' button with appropriate permalink -->
 					<div>
@@ -78,7 +83,10 @@ $misc_icemachines  = new WP_Query( $args1 ); ?>
 					<h2><?php the_title(); ?></h2>
 
 					<!-- Post content -->
-					<?php the_content(); ?>
+					<?php $content = wp_trim_words( get_the_content(), 80, '...<a href="#">Read More</a>' ); ?>
+					<?php $mobile_content = wp_trim_words( get_the_content(), 40, '...<a href="#">Read More</a>' ); ?>
+					<p class="content"><?php echo $content; ?></p>
+					<p class="mobile-content"><?php echo $mobile_content; ?></p>
 
 					<!-- 'Learn more' button with appropriate permalink -->
 					<div>
@@ -91,10 +99,5 @@ $misc_icemachines  = new WP_Query( $args1 ); ?>
 		endwhile;
 		wp_reset_postdata();
 	endif; ?>
-
-	<div class="archive-button-container">
-
-		<a href="#" class="btn btn-default btn-lg">See more products <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-	</div>
 
 </section>

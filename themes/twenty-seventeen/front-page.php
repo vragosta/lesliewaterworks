@@ -22,6 +22,10 @@ get_header(); ?>
 	<!-- Section B -->
 	<?php include( locate_template( 'partials/content-section-B.php' ) ); ?>
 
+	<div class="archive-button-container">
+		<a href="#" class="btn btn-default btn-lg">See more products <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+	</div>
+
 </main>
 
 <?php get_footer(); ?>

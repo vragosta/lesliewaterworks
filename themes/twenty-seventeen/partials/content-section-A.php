@@ -19,7 +19,7 @@ $new_watercoolers = new WP_Query( $args ); ?>
 <section class="section a container-fluid">
 
 	<!-- Section title -->
-	<h2>Brand New Products:</h2>
+	<h1>Brand New Products:</h1>
 
 	<div class="row new-watercoolers"><?php
 		if ( $new_watercoolers->have_posts() ) :
@@ -32,15 +32,21 @@ $new_watercoolers = new WP_Query( $args ); ?>
 						<div class="image-container col-xs-12 col-sm-12 col-md-4">
 
 							<!-- Post thumbnail with appropriate permalink -->
-							<a href="<?php echo get_the_permalink( $post->ID ); ?>"><?php the_post_thumbnail( array( 400, 400 ) ); ?></a>
+							<a href="<?php echo get_the_permalink( $post->ID ); ?>" class="image"><?php the_post_thumbnail( array( 400, 400 ) ); ?></a>
+							<a href="<?php echo get_the_permalink( $post->ID ); ?>" class="mobile-image"><?php the_post_thumbnail( array( 200, 200 ) ); ?></a>
 						</div>
 
 						<div class="content-container col-xs-12 col-sm-12 col-md-8">
 							<!-- Post title -->
-							<h2><?php the_title(); ?></h2>
+							<h2>
+								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+							</h2>
 
 							<!-- Post content -->
-							<?php the_content(); ?>
+							<?php $content = wp_trim_words( get_the_content(), 60, '...<a href="#">Read More</a>' ); ?>
+							<?php $mobile_content = wp_trim_words( get_the_content(), 40, '...<a href="#">Read More</a>' ); ?>
+							<p class="content"><?php echo $content; ?></p>
+							<p class="mobile-content"><?php echo $mobile_content; ?></p>
 
 							<!-- 'Learn more' button with appropriate permalink -->
 							<div>
