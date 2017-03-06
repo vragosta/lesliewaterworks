@@ -7,7 +7,26 @@
 			arrows: false
 		}
 
-		$( '#slick-slider' ).slick( args );
+		$( '#slick-slider' )
+			.slick( args );
+
+		$( '.dropdown' ).on( 'click', function() {
+			$( this )
+				.fadeOut();
+
+			$( '#mobile-menu' )
+				.addClass( 'visible' );
+				// .fadeIn();
+		});
+
+		$( '.close-menu' ).on( 'click', function() {
+			$( '.dropdown' )
+				.fadeIn();
+
+			$( '#mobile-menu' )
+				.removeClass( 'visible' );
+				// .fadeOut();
+		});
 
 	} );
 } )( this );
