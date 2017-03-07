@@ -1,0 +1,607 @@
+/**
+ * Leslie WaterWorks - Twenty Seventeen
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700');
+
+/*=======================
+  === Core Components ===
+  =======================*/
+body {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	max-width: 120rem;
+	margin: 0 auto;
+	/*background: #deefff;
+	background: -moz-linear-gradient(top, #deefff 0%, #98bede 100%);
+	background: -webkit-linear-gradient(top, #deefff 0%,#98bede 100%);
+	background: linear-gradient(to bottom, #deefff 0%,#98bede 100%); */
+}
+
+h3,
+h4 {
+	margin: 0;
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+/*=======================
+  ======== Header =======
+  =======================*/
+#header {
+	padding: 2rem;
+}
+
+@media only screen and ( max-width: 500px ) {
+	#header {
+		padding: 1rem;
+	}
+}
+
+#header .nav-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#header .logo-container {
+	display: flex;
+	align-items: center;
+}
+
+#header .logo-container img {
+	width: 300px;
+	height: 81px;
+	transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+@media only screen and ( max-width: 500px ) {
+	#header .logo-container img {
+		width: 200px;
+		height: 54px;
+	}
+}
+
+/*=======================
+  ========= Menu ========
+  =======================*/
+#menu {
+	text-align: center;
+}
+
+#menu a {
+	display: inline-flex;
+	align-items: center;
+	margin: 0 1rem;
+	font-size: 2rem;
+	color: #333;
+	cursor: pointer;
+	text-decoration: none;
+	transition: color 0.5s ease-in-out;
+}
+
+@media only screen and ( max-width: 500px ) {
+	#footer #menu a {
+		font-size: 1.8rem;
+		margin: 0 0.5rem;
+	}
+}
+
+#header #menu a:last-child {
+	margin-right: 0;
+}
+
+#menu a:hover {
+	color: #007236;
+}
+
+#header .info-panel-container {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+@media only screen and ( max-width: 991px ) {
+	#header .info-panel-container {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+/*--- TODO Consider Revising ---*/
+@media only screen and ( max-width: 768px ) {
+	#header .info-panel-container {
+		display: none;
+	}
+}
+
+#header .info-panel {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	font-size: 2rem;
+}
+
+#header .info-panel span:first-child {
+	color: #007236;
+}
+
+#header .info-panel span:nth-child(2) {
+	font-weight: 300;
+}
+
+#header .dropdown {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	right: 2rem;
+	color: #007236;
+	border-radius: 4px;
+	padding: 0 1rem;
+	font-size: 3.5rem;
+	cursor: pointer;
+	transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+#header .dropdown:hover {
+	background-color: #007236;
+	color: #fff;
+}
+
+@media only screen and ( max-width: 991px ) {
+	#header .dropdown {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@media only screen and ( max-width: 500px ) {
+	#header .dropdown {
+		font-size: 2.5rem;
+		padding: 0 0.5rem;
+	}
+}
+
+/*=======================
+  ====== Pre-Footer =====
+  =======================*/
+#pre-footer {
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#pre-footer h4 {
+	color: #007236;
+	font-size: 2rem;
+	margin-bottom: 1.5rem;
+}
+
+#pre-footer .sponsors {
+	max-width: 800px;
+	margin-bottom: 1.5rem;
+}
+
+#pre-footer .sponsors a {
+	margin: 0 4rem;
+}
+
+#pre-footer .authorized-resellers img {
+	height: 7.5rem;
+}
+
+@media only screen and ( max-width: 768px ) {
+	#pre-footer .sponsors,
+	#pre-footer .authorized-resellers {
+		text-align: center;
+	}
+
+	#pre-footer .sponsors a {
+		margin: 0 2rem;
+	}
+
+	#pre-footer .authorized-resellers img {
+		height: 5.5rem;
+	}
+}
+
+@media only screen and ( max-width: 500px ) {
+	#pre-footer .sponsors a {
+		margin: 0 1rem;
+	}
+}
+
+/*=======================
+  ======== Footer =======
+  =======================*/
+#footer {
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	border-top: 1px solid #ddd;
+}
+
+@media only screen and ( max-width: 500px ) {
+	#footer {
+		padding: 1rem;
+	}
+}
+
+#footer .info-panel div {
+	margin: 1rem 0;
+}
+
+#footer .contact-info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#footer .contact-info a {
+	text-decoration: none;
+	color: #007236;
+}
+
+#footer .copyright {
+	max-width: 700px;
+}
+
+#footer .copyright p span {
+	font-size: 2rem;
+}
+
+#footer .social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#footer .social a {
+	margin: 0 1rem;
+	font-size: 2rem;
+	color: #333;
+}
+
+#footer .social a i {
+	transition: color 0.5s ease-in-out;
+}
+
+#footer .social a.facebook:hover i {
+	color: #3b5998;
+}
+
+#footer .social a.twitter:hover i {
+	color: #4099ff;
+}
+
+#footer .social a.instagram:hover i {
+	color: #cd486b;
+}
+
+#footer .social a.linkedin:hover i {
+	color: #0077b5;
+}
+
+/*=======================
+  ====== Front Page =====
+  =======================*/
+.front-page {
+	margin: 2rem 0;
+}
+
+.front-page a {
+	color: #3366CC;
+	transition: color 0.3s ease-in-out;
+	text-decoration: none;
+}
+
+/*.front-page a:hover {
+	color: #007236;
+}*/
+
+@media only screen and ( max-width: 500px ) {
+	.front-page .container-fluid {
+		padding: 0 1rem;
+	}
+}
+
+.front-page .cta.a {
+	margin: 6rem 0 0 0;
+}
+
+.front-page .cta + .cta,
+.front-page .cta + .section,
+.front-page .section + .section {
+	margin: 4rem 0 0 0;
+}
+
+.front-page .slick-track img:focus {
+	outline: none;
+}
+
+.front-page h1 {
+	color: #007236;
+	font-size: 4.5rem;
+	margin: 0;
+	text-decoration: underline;
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page h1 {
+		font-size: 3.5rem;
+	}
+}
+
+.front-page h2 {
+	color: #007236;
+	margin: 0;
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page h2 {
+		font-size: 2.5rem;
+	}
+}
+
+.front-page h2 a {
+	color: inherit;
+	opacity: 1;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.front-page h2 a:hover {
+	text-decoration: none;
+	opacity: 0.9;
+}
+
+.front-page h2 + .textwidget p {
+	margin: 1rem 0 0 0;
+}
+
+.front-page section img {
+	opacity: 1;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.front-page section img:hover {
+	opacity: 0.9;
+}
+
+.front-page .mobile-image {
+	display: none;
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page .image {
+		display: none;
+	}
+
+	.front-page .mobile-image {
+		display: block;
+	}
+}
+
+.front-page p {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 1.6rem;
+	text-align: left;
+	line-height: 1.7;
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page p {
+		font-size: 1.2rem;
+	}
+}
+
+.front-page .new-watercoolers {
+	padding: 1.5rem;
+}
+
+@media only screen and ( max-width: 768px ) {
+	.front-page .watercooler-item + .watercooler-item {
+		margin: 4rem 0 0 0;
+	}
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page .watercooler-item {
+		padding: 0 1rem;
+	}
+}
+
+.front-page .image-container {
+	display: flex;
+	justify-content: center;
+}
+
+.front-page .content-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.front-page .new-watercoolers .content-container {
+	min-height: 400px;
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page .new-watercoolers .content-container {
+		min-height: 200px;
+	}
+}
+
+.front-page .section h2 {
+	margin: 0 0 1rem 0;
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page
+}
+
+.front-page section p {
+	margin-bottom: 2rem;
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page section p {
+		margin-bottom: 1rem;
+	}
+}
+
+.front-page .mobile-content {
+	display: none;
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page .content {
+		display: none;
+	}
+
+	.front-page .mobile-content {
+		display: block;
+	}
+}
+
+.front-page .btn {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	border-color: transparent;
+	background-color: #007236;
+	color: white;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	transition: background-color .4s ease-in-out,border-color .4s ease-in-out,color .4s ease-in-out;
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page .btn {
+		font-size: 1rem;
+	}
+}
+
+.front-page .btn:hover {
+	background-color: #3366CC;
+}
+
+.front-page .misc-products-container {
+	padding: 1.5rem;
+}
+
+.front-page .misc-products {
+	padding: 0;
+}
+
+.front-page .misc-products + .misc-products {
+	margin: 2rem 0 0 0;
+}
+
+@media only screen and ( max-width: 768px ) {
+	.front-page .misc-products + .misc-products {
+		margin: 4rem -1.5rem 0;
+	}
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page .misc-products {
+		padding: 0 1rem;
+	}
+}
+
+.front-page .misc-products .content-container {
+	min-height: 315px;
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page .misc-products .content-container {
+		min-height: 200px;
+		padding: 0;
+	}
+}
+
+.front-page .archive-button-container {
+	display: flex;
+	justify-content: center;
+	margin: 4rem 0;
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page .archive-button-container {
+		margin: 2rem 0;
+	}
+}
+
+.front-page .archive-button-container .btn {
+	background-color: #3366CC;
+	font-size: 1.6rem;
+}
+
+@media only screen and ( max-width: 500px ) {
+	.front-page .archive-button-container .btn {
+		font-size: 1.2rem;
+	}
+}
+
+.front-page .archive-button-container .btn:hover {
+	background-color: #007236;
+}
+
+/*--- Mobile Menu ---*/
+#mobile-menu {
+
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	padding: 0;
+	margin: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba( 0, 0, 0, .85 );
+	z-index: 10;
+	transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+#mobile-menu.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+#mobile-menu .close-container {
+	display: flex;
+	justify-content: flex-end;
+	padding: 4.5rem 2.4rem 1.5rem 2rem;
+}
+
+#mobile-menu .close-container button:focus,
+#mobile-menu .close-container button:active,
+#mobile-menu .close-container button:active:focus {
+	outline: none;
+}
+
+#mobile-menu .close-container i {
+	color: #fff;
+}
+
+#mobile-menu #menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#mobile-menu #menu a {
+	font-size: 4rem;
+	margin: 2rem 0;
+	color: #a2a4a7;
+	transition: color 0.3s ease-in-out;
+}
+
+#mobile-menu #menu a:hover {
+	color: #007236;
+}
