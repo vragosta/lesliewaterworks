@@ -24,77 +24,84 @@ $misc_icemachines  = new WP_Query( $args1 ); ?>
 
 <section class="section b container-fluid">
 		<!-- Section title -->
-	<h2>Our Other Products:</h2><?php
+	<h1>Our Other Products:</h1>
 
-	// Display two most recent watercoolers.
-	if ( $misc_watercoolers->have_posts() ) :
-		while ( $misc_watercoolers->have_posts() ) : $misc_watercoolers->the_post(); ?>
+	<div class="misc-products-container"><?php
+		// Display two most recent watercoolers.
+		if ( $misc_watercoolers->have_posts() ) :
+			while ( $misc_watercoolers->have_posts() ) : $misc_watercoolers->the_post(); ?>
 
-			<div class="row misc-products">
+				<div class="row misc-products">
 
-				<div class="image-container col-xs-12 col-sm-4 col-md-3">
+					<div class="image-container col-xs-12 col-sm-4 col-md-3">
 
-					<!-- Post thumbnail with appropriate permalink -->
-					<a href="<?php echo get_the_permalink( $post->ID ); ?>"><?php the_post_thumbnail( array( 400, 400 ) ); ?></a>
+						<!-- Post thumbnail with appropriate permalink -->
+						<a href="<?php echo get_the_permalink( $post->ID ); ?>" class="image"><?php the_post_thumbnail( array( 400, 400 ) ); ?></a>
+						<a href="<?php echo get_the_permalink( $post->ID ); ?>" class="mobile-image"><?php the_post_thumbnail( array( 200, 200 ) ); ?></a>
 
-				</div>
-
-				<div class="content-container col-xs-12 col-sm-8 col-md-9">
-
-					<!-- Post title -->
-					<h2><?php the_title(); ?></h2>
-
-					<!-- Post content -->
-					<?php the_content(); ?>
-
-					<!-- 'Learn more' button with appropriate permalink -->
-					<div>
-						<a href="<?php echo get_the_permalink( $post->ID ); ?>" class="btn btn-default btn-md">Learn more</a>
 					</div>
 
-				</div>
-			</div><?php
+					<div class="content-container col-xs-12 col-sm-8 col-md-9">
 
-		endwhile;
-		wp_reset_postdata();
-	endif;
+						<!-- Post title -->
+						<h2>
+							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						</h2>
 
-	// Display two most recent icemachines.
-	if ( $misc_icemachines->have_posts() ) :
-		while ( $misc_icemachines->have_posts() ) : $misc_icemachines->the_post(); ?>
+						<!-- Post content -->
+						<?php $content = wp_trim_words( get_the_content(), 80, '...<a href="#">Read More</a>' ); ?>
+						<?php $mobile_content = wp_trim_words( get_the_content(), 40, '...<a href="#">Read More</a>' ); ?>
+						<p class="content"><?php echo $content; ?></p>
+						<p class="mobile-content"><?php echo $mobile_content; ?></p>
 
-			<div class="row misc-products">
+						<!-- 'Learn more' button with appropriate permalink -->
+						<div>
+							<a href="<?php echo get_the_permalink( $post->ID ); ?>" class="btn btn-default btn-md">Learn more</a>
+						</div>
 
-				<div class="image-container col-xs-12 col-sm-4 col-md-3">
+					</div>
+				</div><?php
 
-					<!-- Post thumbnail with appropriate permalink -->
-					<a href="<?php echo get_the_permalink( $post->ID ); ?>"><?php the_post_thumbnail( array( 400, 400 ) ); ?></a>
+			endwhile;
+			wp_reset_postdata();
+		endif;
 
-				</div>
+		// Display two most recent icemachines.
+		if ( $misc_icemachines->have_posts() ) :
+			while ( $misc_icemachines->have_posts() ) : $misc_icemachines->the_post(); ?>
 
-				<div class="content-container col-xs-12 col-sm-8 col-md-9">
+				<div class="row misc-products">
 
-					<!-- Post title -->
-					<h2><?php the_title(); ?></h2>
+					<div class="image-container col-xs-12 col-sm-4 col-md-3">
 
-					<!-- Post content -->
-					<?php the_content(); ?>
+						<!-- Post thumbnail with appropriate permalink -->
+						<a href="<?php echo get_the_permalink( $post->ID ); ?>" class="image"><?php the_post_thumbnail( array( 400, 400 ) ); ?></a>
+						<a href="<?php echo get_the_permalink( $post->ID ); ?>" class="mobile-image"><?php the_post_thumbnail( array( 200, 200 ) ); ?></a>
 
-					<!-- 'Learn more' button with appropriate permalink -->
-					<div>
-						<a href="<?php echo get_the_permalink( $post->ID ); ?>" class="btn btn-default btn-md">Learn more</a>
 					</div>
 
-				</div>
-			</div><?php
+					<div class="content-container col-xs-12 col-sm-8 col-md-9">
 
-		endwhile;
-		wp_reset_postdata();
-	endif; ?>
+						<!-- Post title -->
+						<h2><?php the_title(); ?></h2>
 
-	<div class="archive-button-container">
+						<!-- Post content -->
+						<?php $content = wp_trim_words( get_the_content(), 80, '...<a href="#">Read More</a>' ); ?>
+						<?php $mobile_content = wp_trim_words( get_the_content(), 40, '...<a href="#">Read More</a>' ); ?>
+						<p class="content"><?php echo $content; ?></p>
+						<p class="mobile-content"><?php echo $mobile_content; ?></p>
 
-		<a href="#" class="btn btn-default btn-lg">See more products <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						<!-- 'Learn more' button with appropriate permalink -->
+						<div>
+							<a href="<?php echo get_the_permalink( $post->ID ); ?>" class="btn btn-default btn-md">Learn more</a>
+						</div>
+
+					</div>
+				</div><?php
+
+			endwhile;
+			wp_reset_postdata();
+		endif; ?>
 	</div>
 
 </section>
