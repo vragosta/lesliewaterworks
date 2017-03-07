@@ -301,9 +301,9 @@ p {
 	text-decoration: none;
 }
 
-.front-page a:hover {
+/*.front-page a:hover {
 	color: #007236;
-}
+}*/
 
 @media only screen and ( max-width: 500px ) {
 	.front-page .container-fluid {
